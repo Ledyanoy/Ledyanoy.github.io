@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+  <html lang="ru">
+    <head>       
+      <meta charset="utf-8">
+      <link href="styles.css" rel="stylesheet">   
+      <title>City of Sedona</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">	  
+    </head>	   
+    <body class="page"> 
+      <div class="page__inner">
+        <header class="page-header">
+          <div class="main-menu">
+            <ul class="page__mm-list main-menu__list">
+              <li class="main-menu__item"><a href="index.html" class="main-menu__link">Главная</a></li>
+              <li class="main-menu__item"><a href="" class="main-menu__link">Фото и видео</a></li> 
+              <li class="main-menu__item"><a href="" class="main-menu__link active">Форма отзыва</a></li> 
+              <li class="main-menu__item"><a href="" class="main-menu__link">HTML Academy</a></li>                  
+            </ul> 
+            <button class="main-menu__btn main-menu__btn--close toggle-button page__mm-btn page__mm-btn--close" data-togglr-target=".page" data-togglr-remove="page--open">
+              <span class="visually-hidden">закрыть</span>              
+            </button>
+            <button class="main-menu__btn main-menu__btn--open toggle-button page__mm-btn page__mm-btn--open" data-togglr-target=".page" data-togglr-add="page--open">
+              <span class="visually-hidden">открыть</span>              
+            </button>
+          </div>
+          <a href="index.html" class="page__logo page-header__logo">
+            <picture>
+              <source media="(min-width: 1280px)" srcset="pictures/logotype-desktop.png">
+              <source media="(min-width: 768px)" srcset="pictures/logotype-tablet.png">
+              <img src="pictures/logotyle-mobile.png" alt="logo">
+            </picture>
+          </a>
+        </header>
+        <main>
+          <section class="page__intro intro"> 
+            <h1 class="visually-hidden">welcome to the gargeous sedona "Because the Grand Vanuon sucks"!</h1>          
+            <div class="intro__image intro__image--form">
+              <picture>                  
+                  <source media="(min-width: 768px)" srcset="pictures/text-form-t.png" class="intro__text--tablet intro__text">
+                  <img src="pictures/text-form-m.png" class="intro__text">
+              </picture>              
+            </div>
+          </section>          
+          <section class="form-card form-card--angle">
+            <h3 class="form-card__text form-text form-text--caption form-text--caption-tablet">Оставьте свой отзыв
+            </h3>
+            <p class="form-card__text form-text form-text--topic">Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а&nbsp;также&nbsp;о посещенных вами достопримечательностях
+            </p>
+          </section> 
+          <form class="form-card__outer">         
+            <section class="form-card form-card--name">
+              <h3 class="form-card__text form-text form-text--caption form-text--name-tbl">Представьтесь<span class="form-text--invisible-tbl">, пожалуйста</span>:
+              </h3>
+              <ul class="form-card__graphs">
+                <li class="form-card__graph">
+                  <label for="name" class="form-card__name">Имя:</label>                
+                  <input type="text" id="name" placeholder="Петр" class="form-input">                              
+                </li>
+                <li class="form-card__graph">
+                  <label for="surname" class="form-card__name">Фамилия:</label>                
+                  <input type="text" id="surname" placeholder="Иванов" class="form-input">                              
+                </li> 
+                <li class="form-card__graph">
+                  <label for="patronymic" class="form-card__name">Отчество:</label>                
+                  <input type="text" id="patronymic" placeholder="Александрович" class="form-input">                              
+                </li> 
+            </ul>            
+            </section> 
+            <section class="form-card form-card--contact">
+              <h3 class="form-card__text form-text form-text--caption">Контактная информация:
+              </h3>
+              <ul class="form-card__graphs graphs graphs--contact">
+                <li class="form-card__graph form-card__graph--contact form-card__graph--left">
+                  <label for="phone" class="form-card__item form-item form-item--phone"><span class="form-text--invisible-desk">Контактный</span> телефон:</label>                
+                  <input type="text" id="phone" placeholder="Введите телефон" class="form-input form-input--contact">
+                  <label for="phone">
+                    <div class="form-card__icons"></div>
+                  </label>
+                  <label for="phone" class="form-card__item form-item form-item--error">Ошибка, перепроверьте номер</label>                                          
+                </li>
+                <li class="form-card__graph form-card__graph--contact form-card__graph--right">
+                  <label for="mail" class=" form-card__item form-item form-item--mail">Электронная почта:</label>                
+                  <input type="text" id="mail" placeholder="Введите e-mail" class="form-input form-input--contact">
+                  <label for="mail">
+                    <div class="form-card__icons form-card__icons--mail"></div>
+                  </label>                                                         
+                </li>
+              </ul>
+            </section>
+            <section class="form-card form-card--impression">
+              <h3 class="form-card__text form-text form-text--caption form-text--tablet">Ваше Общее впечатление:
+              </h3>
+              <ul class="form-card__graphs" >
+                <li class="form-card__radiobtn">
+                    <input type="radio" checked name="impression" id="positive" class="form-radio visually-hidden">
+                    <label for="positive" class="form-text form-text--radio"><span class="form-text form-text--radio-topic">Скорее&nbsp;положительное</span></label>                   
+                </li>
+                <li class="form-card__radiobtn">
+                    <input type="radio" name="impression" id="negative" class="form-radio visually-hidden">
+                    <label for="negative" class="form-text form-text--radio"><span class="form-text form-text--radio-topic">Скорее&nbsp;отрицательное</span></label>                   
+                </li>
+                <li class="form-card__radiobtn">
+                    <input type="radio" name="impression" id="trouble" class="form-radio visually-hidden">
+                    <label for="trouble" class="form-text form-text--radio"><span class="form-text form-text--radio-topic">Затрудняюсь&nbsp;ответить</span></label>                   
+                </li>
+              </ul>
+            </section> 
+            <section class="form-card form-card--visited">
+              <h3 class="form-card__text form-text form-text--caption form-text--visited-tbl">посещенные достопримечательности:
+              </h3>
+              <ul class="form-card__graphs graphs graphs--visited">
+                <li class="form-card__check form-check form-check--bridge">
+                    <input type="checkbox" checked id="bridge" class="form-radio form-radio--check visually-hidden">
+                    <label for="bridge" class="form-text form-text--radio"><span class="form-text form-text--radio-topic">Мост&nbsp;Дьявола</span></label>                   
+                </li>
+                <li class="form-card__check form-check form-check--park">
+                    <input type="checkbox" checked id="park" class="form-radio form-radio--check visually-hidden">
+                    <label for="park" class="form-text form-text--radio"><span class="form-text form-text--radio-topic">Слайд&#8209;парк</span></label>                   
+                </li>
+                <li class="form-card__check form-check form-check--rock">
+                    <input type="checkbox" id="rock" class="form-radio form-radio--check visually-hidden">
+                    <label for="rock" class="form-text form-text--radio"><span class="form-text form-text--radio-topic">Гора&#8209;Колокол</span></label>                   
+                </li>
+                <li class="form-card__check form-check form-check--red">
+                    <input type="checkbox" checked id="red" class="form-radio form-radio--check visually-hidden">
+                    <label for="red" class="form-text form-text--radio"><span class="form-text form-text--radio-topic">Красные&nbsp;скалы</span></label>                   
+                </li>
+              </ul>
+            </section> 
+            <section class="form-card form-card--feedback">
+                <h3 class="form-card__text form-text form-text--caption">Опишите свои эмоции:
+                </h3>
+                <div class="form-card__graphs">
+                  <div class="form-card__graph"> 
+                    <textarea class="form-input form-input--story" rows=5 placeholder="Опишите&nbsp;подробно&nbsp;все&nbsp;свои восторги"></textarea>
+                  </div>
+                  <div class="graphs graphs--btn"> 
+                    <div class="order__btn order__btn--form">
+                      <button class="btn">ОТПРАВИТЬ ОТЗЫВ</button> 
+                    </div>
+                    <span class="form-text form-text--visible-tbl">* &mdash; обязательные поля</span> 
+                  </div>
+                </div>                            
+            </section>
+          </form>           
+        </main>
+        <footer class="footer-page">
+          <h2 class="footer-page__tag">#VISITSEDONA</h2>
+          <ul class="footer-page__socials">
+            <li class=""><a href=""><img src="pictures/twitter.svg" alt="twitter" class="footer-page__icons"></a></li>
+            <li class=""><a href=""><img src="pictures/facebook.svg" alt="facebook" class="footer-page__icons--facebook"></a></li>
+            <li class=""><a href=""><img src="pictures/youtube.svg" alt="youtube" class="footer-page__icons"></a></li>
+          </ul>
+          <div class="footer-page__copyrights">
+            <p class="footer-page__copyrights-name">РАЗРАБОТАНО</p>
+            <a href="" class="footer-page__copyrights-logo"><img src="pictures/academy.svg" alt="htmlacademy"></a>
+          </div>
+        </footer>
+      </div>
+      <script src="togglr.min.js"></script>
+    </body>
