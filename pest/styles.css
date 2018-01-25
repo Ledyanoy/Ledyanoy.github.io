@@ -48,13 +48,15 @@ table {
 .page {
   font-family: "PT Sans", Arial, Georgia; }
   .page__inner {
+    min-width: 280px;
     max-width: 960px;
     margin: 0 auto;
     padding: 0px 15px; }
   .page__header {
     margin-top: 22px; }
   .page__main {
-    margin-top: 25px; }
+    margin-top: 25px;
+    margin-bottom: 35px; }
 
 .p-header {
   display: flex;
@@ -62,6 +64,10 @@ table {
   @media (max-width: 845px) {
     .p-header {
       flex-wrap: wrap; } }
+  @media (max-width: 420px) {
+    .p-header {
+      flex-direction: column;
+      align-items: center; } }
   .p-header__logo {
     margin-top: 8px;
     margin-right: 9.6%;
@@ -76,13 +82,20 @@ table {
       .p-header__fb {
         order: 3;
         width: 100%; } }
+    @media (max-width: 370px) {
+      .p-header__fb {
+        flex-direction: column;
+        align-items: center; } }
   .p-header__login {
-    width: 30%;
+    width: 200px;
     margin-left: 5%;
     transition: margin 0.4s; }
     @media (max-width: 845px) {
       .p-header__login {
         margin-left: 0%; } }
+    @media (max-width: 420px) {
+      .p-header__login {
+        margin-bottom: 20px; } }
 
 .feedback-search {
   display: flex;
@@ -118,6 +131,8 @@ table {
     background-repeat: no-repeat;
     background-position: 15px 8px;
     cursor: pointer; }
+    .feedback-search__btn:active {
+      background-color: #55ab00; }
 
 .phone__city {
   font-size: 12px;
@@ -216,34 +231,58 @@ table {
   width: 100%;
   background-color: #f6b213;
   display: flex;
-  flex-wrap: wrap; }
+  justify-content: space-around; }
+  @media (max-width: 740px) {
+    .main-menu {
+      flex-wrap: wrap; } }
+  @media (max-width: 615px) {
+    .main-menu {
+      flex-direction: column; } }
   .main-menu__item {
     background-color: #f6b213;
     padding-top: 14px;
     padding-bottom: 12px; }
     .main-menu__item:hover .main-menu__sub {
       display: block; }
+    @media (max-width: 615px) {
+      .main-menu__item {
+        text-align: center;
+        overflow: hidden;
+        border-bottom: 1px solid #000000;
+        padding: 0px; }
+        .main-menu__item:last-child {
+          border: none; } }
   .main-menu__link {
     background-color: #f6b213;
     text-decoration: none;
     color: #000000;
     font-size: 15px;
     text-transform: uppercase;
-    padding-left: 30px;
-    padding-right: 30px;
     position: relative; }
+    @media (max-width: 740px) {
+      .main-menu__link {
+        margin: 0 35px; } }
+    @media (max-width: 615px) {
+      .main-menu__link {
+        display: block;
+        padding: 15px 0px;
+        margin: 0px; } }
     .main-menu__link:hover {
       color: #fff; }
     .main-menu__link--cont:after {
       content: "";
       position: absolute;
-      right: 20px;
+      right: -10px;
       top: 10px;
       width: 0;
       height: 0;
       border-left: 3px solid transparent;
       border-right: 3px solid transparent;
       border-top: 5px solid #000000; }
+      @media (max-width: 615px) {
+        .main-menu__link--cont:after {
+          right: 20px;
+          top: 20px; } }
   .main-menu__sub {
     display: none;
     text-align: center; }
@@ -329,20 +368,15 @@ table {
 
 .cards {
   display: flex;
-  margin-left: 7px; }
+  margin-left: 7px;
+  justify-content: space-between;
+  width: 99%; }
   .cards__item {
-    text-align: center;
-    margin-right: 4%; }
-    .cards__item:nth-child(2) {
-      margin-right: 5%; }
-    .cards__item:nth-child(3) {
-      margin-right: 6%; }
-    .cards__item:nth-child(5) {
-      margin-right: 5%; }
-    .cards__item:last-child {
-      margin-right: 0%; }
+    text-align: center; }
     .cards__item:hover .cards__photo {
-      border: 3px solid #82c044; }
+      border: 3px solid #82c044;
+      margin: -3px;
+      margin-bottom: 19px; }
     .cards__item:hover .cards__text {
       color: #82c044;
       border-bottom: none; }
@@ -353,8 +387,7 @@ table {
     border-radius: 50%;
     margin: 0 auto;
     margin-bottom: 22px;
-    /* для pp*/
-    box-sizing: border-box; }
+    /* для pp*/ }
     .cards__photo--comar {
       background: url(pictures/comar.jpg) no-repeat -1px; }
     .cards__photo--tarakan {
@@ -376,16 +409,32 @@ table {
 
 .interactive {
   display: flex;
-  padding-left: 10px; }
+  padding-left: 10px;
+  justify-content: space-between; }
   .interactive__reviews {
     margin-left: 20px; }
+  .interactive__subscribe {
+    width: 50%;
+    margin-left: 22px;
+    /*для pp*/ }
 
 .reviews {
   width: 65%; }
   .reviews__member {
     display: block;
-    margin-left: 35%;
-    margin-bottom: 28px; }
+    margin-left: 32%;
+    margin-bottom: 28px;
+    position: relative; }
+    .reviews__member:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 75px;
+      height: 75px;
+      right: 108%;
+      top: -2px;
+      border-radius: 50%;
+      background: url(pictures/face.jpg); }
   .reviews__name {
     font-weight: bold;
     font-size: 18px; }
@@ -395,7 +444,13 @@ table {
     margin-top: 5px;
     line-height: 1.4em;
     width: 70%; }
+    .reviews__description--subscr {
+      width: 90%;
+      line-height: 1.3em;
+      margin-bottom: 13px; }
   .reviews__story {
+    display: block;
+    width: 90%;
     font-size: 14px;
     line-height: 1.4em;
     margin-bottom: 18px; }
@@ -410,3 +465,130 @@ table {
     color: #000000;
     text-decoration: none;
     border-bottom: 1px solid #82c044; }
+    .reviews__link:hover {
+      color: #82c044; }
+
+.subscribe__input {
+  width: 95%;
+  border: none;
+  border-bottom: 1px solid #000000;
+  margin-bottom: 16px; }
+
+.subscribe__btn {
+  margin-top: 10px;
+  width: 95%;
+  height: 40px;
+  margin-bottom: 15px; }
+
+::-webkit-input-placeholder {
+  color: #909090; }
+
+::-moz-placeholder {
+  color: #909090; }
+
+:-moz-placeholder {
+  color: #909090; }
+
+:-ms-input-placeholder {
+  color: #909090; }
+
+.button {
+  color: #fff;
+  background-color: #0675cb;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer; }
+  .button:active {
+    background-color: #55ab00; }
+
+.p-footer {
+  padding-top: 26px;
+  padding-bottom: 35px;
+  background-color: #82c044; }
+  .p-footer__body {
+    margin-left: 10px; }
+  .p-footer__footer {
+    margin-top: 25px;
+    margin-left: 5px; }
+
+.footer-menu__caption {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 13px; }
+
+.footer-menu__link {
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+  line-height: 1.47em; }
+  .footer-menu__link:hover {
+    color: #fff; }
+
+.footer-menu__icons {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 22px;
+  width: 215px;
+  height: 90px; }
+  .footer-menu__icons--post {
+    width: 145px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background: url(pictures/delivery.png) no-repeat; }
+
+.footer-menu__icon {
+  display: block;
+  width: 67px;
+  height: 43px;
+  border-radius: 5px; }
+  .footer-menu__icon--webmoney {
+    background: url(pictures/web.png); }
+  .footer-menu__icon--qiwi {
+    background: url(pictures/qw.png); }
+  .footer-menu__icon--mastercard {
+    background: url(pictures/mc.png); }
+  .footer-menu__icon--svyaznoy {
+    background: url(pictures/sv.png); }
+  .footer-menu__icon--yandex {
+    background: url(pictures/ya.png); }
+  .footer-menu__icon--visa {
+    background: url(pictures/visa.png); }
+
+.footer-body {
+  display: flex;
+  justify-content: space-between;
+  width: 90.5%; }
+  .footer-body__additional {
+    margin-left: 14%; }
+  .footer-body__pay {
+    margin-left: 5%; }
+
+.footer-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; }
+  .footer-footer__social {
+    display: flex; }
+  .footer-footer__text {
+    color: #fff;
+    font-size: 14px; }
+  .footer-footer__link {
+    color: #000000; }
+  .footer-footer__social {
+    display: flex;
+    width: 138px;
+    justify-content: space-between;
+    margin-right: 22.5%; }
+  .footer-footer__icon {
+    display: block;
+    width: 21px;
+    height: 20px;
+    border: solid 1px #000000;
+    border-radius: 1px; }
