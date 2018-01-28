@@ -24,14 +24,15 @@
               или&nbsp;<a href="mailto:" class="text text--link">написать&nbsp;нам</a>          
           </div>
           <form class="connecting-box__search">
-            <input type="search" placeholder="Поиск среди 35 000 товаров" class="connecting-box__input">
+            <input type="search" placeholder="Поиск среди 35 000 товаров" class="connecting-box__input" id="search">
+            <label class="visually-hidden" for="search">Поиск среди 35 000 товаров</label>
             <button class="connecting-box__btn">                
               <span class="visually-hidden">Искать</span>
             </button>
           </form>
         </div>
         <div class="p-header__buyer-place">
-          <div class="text">
+          <div class="p-header__text text">
             <a href="" class="text text--link">Войти</a>
             или
             <a href="" class="text text--link">Зарегистрироваться</a>
@@ -43,7 +44,10 @@
         </div>
       </header>
       <main class="page__main main wrapper">
-        <ul class="main-menu">
+        <h1 class="visually-hidden">Pest911 - Интернет магазин товаров для санитарно-профилактических мероприятий по борьбе с грызунами (дератизация),
+            насекомыми (дезинсекция) на различных объектах.
+        </h1>
+        <ul class="main-menu">          
           <li class="main-menu__item"><a href="" class="main-menu__link main-menu__link--drop">по&nbsp;вредителям</a>
             <ul class="main-menu__sub">
               <li><a href="" class="main-menu__sub-link">Грызуны</a></li>
@@ -190,7 +194,7 @@
               <h2 class="caption-text reviews__text">Отзывы</h2>
               <div class="reviews__member">
                 <p class="reviews__name">Ларина Светлана</p>
-                <p class="reviews__description gray-text">Садовод-любитель. Стаж 2 года</p>
+                <p class="reviews__description text-additional">Садовод-любитель. Стаж 2 года</p>
               </div>
               <p class="reviews__story"><span class="reviews__quotes">&#171</span> Кстати, насчет кротов, был случай: крот проделал ход под сараем. Откопали нору, направили туда отпугиватель. За неделю
                   крот ушел незнамо куда. На улице такие эксперименты не проводила. <span class="reviews__quotes">&#187</span></p>
@@ -198,15 +202,17 @@
           </section>
           <section class="interactive__subscribe subscribe"> 
               <h2 class="caption-text subscribe__text">Подписаться</h2>               
-              <p class="gray-text subscribe__gray-text">Подпишитесь&nbsp;на&nbsp;рассылку, чтобы&nbsp;первыми узнавать&nbsp;о&nbsp;наших новинках и&nbsp;получать призы</p> 
+              <p class="text-additional subscribe__gray-text">Подпишитесь&nbsp;на&nbsp;рассылку, чтобы&nbsp;первыми узнавать&nbsp;о&nbsp;наших новинках и&nbsp;получать призы</p> 
               <form>
-                <input type="text" class="subscribe__input" placeholder="*Эл. почта"> 
-                <input type="text" class="subscribe__input" placeholder="Имя"> 
+                <input type="text" class="subscribe__input" placeholder="*Эл. почта" id="mail"> 
+                <label class="visually-hidden" for="mail">*Эл. почта</label>
+                <input type="text" class="subscribe__input" placeholder="Имя" id="name">
+                <label class="visually-hidden" for="name">Имя</label> 
                 <div class="subscribe__btn">
                   <button class="button">Подписаться</button> 
                 </div> 
               </form>              
-              <p class="gray-text subscribe__gray-text">Заполните <a href="" class="text-link">анкету</a> и получайте индивидуальные предложения!</p>            
+              <p class="text-additional subscribe__gray-text">Заполните <a href="" class="text-link">анкету</a> и получайте индивидуальные предложения!</p>            
           </section>
         </div>
       </main>
@@ -252,17 +258,17 @@
               </div>
             </section>
           </div>
-          <div class="p-footer__footer footer-footer">
-            <div class="footer-footer__text">
+          <div class="p-footer__footer footer-end">
+            <div class="footer-end__text">
               &copy;&nbsp;2016 &laquo;PEST 911&raquo;
             </div> 
-            <ul class="footer-footer__social">
-              <li class="footer-footer__icon"><a href=""><img src="pictures/vk.svg" alt="вконтакте"></a></li>
-              <li class="footer-footer__icon"><a href=""><img src="pictures/f.svg" alt="facebook"></a></li>
-              <li class="footer-footer__icon"><a href=""><img src="pictures/g.svg" alt="google+"></a></li>
-              <li class="footer-footer__icon"><a href=""><img src="pictures/y.svg" alt="youtube"></a></li>
+            <ul class="footer-end__social">
+              <li class="footer-end__icon"><a href=""><img src="pictures/vk.svg" alt="вконтакте"></a></li>
+              <li class="footer-end__icon"><a href=""><img src="pictures/f.svg" alt="facebook"></a></li>
+              <li class="footer-end__icon"><a href=""><img src="pictures/g.svg" alt="google+"></a></li>
+              <li class="footer-end__icon"><a href=""><img src="pictures/y.svg" alt="youtube"></a></li>
             </ul>
-            <p class="footer-footer__text footer-footer__text--develop">Создание сайта — компания <a href="" class="footer-footer__link">&laquo;Пиком&raquo;</a>
+            <p class="footer-end__text footer-end__text--develop">Создание сайта — компания <a href="" class="footer-end__link">&laquo;Пиком&raquo;</a>
             </p>        
           </div>
         </div> 
